@@ -25,21 +25,24 @@ export default function PersonForm({
     const { value } = e.target;
     onSelectChange(principalMember, value);
   };
-  
+
   return (
-    <div className="row" key={index}>
+    <div className="col-span-3 pl-5 pr-5" key={"input"+index}>
+      <label className="block text-gray-700 text-sm font-bold mb-2">
+        Name
+      </label>
       <input
         type="text"
         name="name"
-        className="col"
+        className="shadow appearance-none border rounded ml-2 mr-5 py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         onBlur={handleChange}
       ></input>
-      <select className="col" onChange={(e) => setHasRelation(e.target.value)}>
+      <select className="shadow  border rounded ml-2 mr-5 py-2 px-5 text-gray-700 leading-tight  focus:shadow-outline" onChange={(e) => setHasRelation(e.target.value)}>
         <option value={"0"}>does not have a direct family member</option>
         <option value={"1"}>is a direct relative of</option>
       </select>
       {hasRelation === "1" ? (
-        <select className="col" onChange={handleSelectChange} defaultValue={"notOption"}>
+        <select className="shadow  border rounded ml-2 mr-5 py-2 px-5 text-gray-700 leading-tight  focus:shadow-outline" onChange={handleSelectChange} defaultValue={"notOption"}>
           { dataSet.map((element, index) => {
               return element !== principalMember ? (
                 <option key={element + index} value={element}>

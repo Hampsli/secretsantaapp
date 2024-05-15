@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import PersonForm from "../PersonForm/PersonForm";
 import { useState } from "react";
+import PersonForm from "../PersonForm/PersonForm";
 
 export default function PrincipalForm() {
   const [formRows, setFormRows] = useState([{}]);
@@ -14,16 +14,19 @@ export default function PrincipalForm() {
       setDataSetRelations([...DataSetRelations, { p1: member1, p2: member2 }]);
     }
   };
-  const handleSubmit = () => {};
   const handleNewMember = (e) => {
     e.preventDefault();
     setFormRows([...formRows, { id: formRows.length - 1 + 1 }]);
   };
+  const handleSubmit = () => {
+    const response = await 
+  };
+
   return (
-    <div className="mb-32 grid text-left bg-white lg:mb-0 lg:w-full lg:max-w-5xl ">
-      <form>
-        <div className="row">
-          <button className="col bg-green" onClick={handleNewMember}>
+    <form key="form" onSubmit={handleSubmit}>
+    <div key={"content"} className="mb-32 pt-5 pb-5 grid grid-cols-3 gap-4 text-left bg-white mt-20">
+        <div className="col-start-3">
+            <button className=" bg-blue-500 text-white font-bold py-4 px-4 rounded" onClick={handleNewMember}>
             {" "}
             add family member
           </button>
@@ -70,7 +73,13 @@ export default function PrincipalForm() {
             <></>
           );
         })}
-      </form>
+        <div className="col-start-3">
+        <button className="bg-green-500 text-white font-bold py-4 px-4 rounded" type="submit">
+            {" "}
+            Create secret santa list
+          </button>
+        </div>
     </div>
+    </form>
   );
 }
