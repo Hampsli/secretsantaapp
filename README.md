@@ -48,7 +48,7 @@ This will start the API. You can now test your Next.js front-end application.
 
 ## Testing Coverage
 
-# Testing coverage for front end
+**Testing coverage for front end**
 Edge cases: I didn't have time to finish, I'll continue working on it.
 
 unit Test with Jest:
@@ -56,5 +56,5 @@ unit Test with Jest:
 -Test final screen with showlist.test.jsx 
 -Test principal form with principalForm.test.jsx
 
-# Testing coverage for api
+**Testing coverage for api**
 
