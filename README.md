@@ -7,6 +7,10 @@ This Next.js project is bootstrapped with `create-next-app` and integrates an AP
 **Prerequisites:**
 
 * Java Development Kit (JDK) version 17 or higher
+* Node version 20 or higher
+* apache-maven version 3.9 or higher
+
+
 
 **Steps:**
 

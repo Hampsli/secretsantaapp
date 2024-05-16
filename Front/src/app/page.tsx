@@ -9,7 +9,7 @@ export default function Home() {
           Hello! Make your secret santa list
         </h1>
       </div>
-      <div className="mb-20 mt-20 row text-left bg-yellow-50 border-b pt-4 pb-4 pl-4 pr-4 rounded-xl">
+      <div className="mb-20 mt-20 row text-left text-black bg-yellow-50 border-b pt-4 pb-4 pl-4 pr-4 rounded-xl">
           <h3 className="font-bold mb-2">Instructions</h3>
           <ul>
            <li>&#8226; Add your family members and you in the next inputs</li>

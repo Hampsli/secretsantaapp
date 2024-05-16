@@ -35,7 +35,7 @@ export default function ShowList() {
  }
 
   return (
-    <div key={"content"} className="mb-32 pt-5 pb-5 grid grid-cols-3 gap-4 text-left bg-white mt-20">
+    <div key={"content"} className="mb-32 pt-5 pb-5 grid grid-cols-3 gap-4 text-left text-black bg-white mt-20">
       {finalList && finalList.map((row,index)=>{
         return (
           <ResultComponent
