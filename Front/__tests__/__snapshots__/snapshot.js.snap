@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders final screen unchanged 1`] = `
+<div>
+  <main
+    class="p-24 h-screen bg-gradient-to-r from-red-500 to-orange-500"
+  >
+    <div
+      class="mb-15 row z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex"
+    >
+      <h1
+        class="fixed left-0 top-0 flex w-full justify-center border-b  bg-white from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"
+      >
+        Thank you for make your secret santa List here the results 
+      </h1>
+    </div>
+    <div
+      class="mb-32 pt-5 pb-5 grid grid-cols-3 gap-4 text-left bg-white mt-20"
+    />
+  </main>
+</div>
+`;
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <main
+    class="p-24 h-screen bg-gradient-to-r from-red-500 to-orange-500"
+  >
+    <div
+      class="mb-15 row z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex"
+    >
+      <h1
+        class="fixed left-0 top-0 flex w-full justify-center border-b  bg-white from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"
+      >
+        Hello! Make your secret santa list
+      </h1>
+    </div>
+    <div
+      class="mb-20 mt-20 row text-left bg-yellow-50 border-b pt-4 pb-4 pl-4 pr-4 rounded-xl"
+    >
+      <h3
+        class="font-bold mb-2"
+      >
+        Instructions
+      </h3>
+      <ul>
+        <li>
+          • Add your family members and you in the next inputs
+        </li>
+        <li>
+          • if you need add another family member only click on the blue rigth button of the left
+        </li>
+        <li>
+          • When you finish add your family remember check the inmediate relations on your family list
+        </li>
+        <li>
+          • do you finished? click on create secret santa list button!
+        </li>
+      </ul>
+    </div>
+    <form>
+      <div
+        class="mb-32 pt-5 pb-5 grid grid-cols-3 gap-4 text-left bg-white mt-20"
+      >
+        <div
+          class="col-start-3"
+        >
+          <button
+            class=" bg-blue-500 text-white font-bold py-4 px-4 rounded"
+            name="addMember"
+          >
+             
+            add family member
+          </button>
+        </div>
+        <div
+          class="col-span-3 pl-5 pr-5"
+        >
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Name
+          </label>
+          <input
+            class="shadow appearance-none border rounded ml-2 mr-5 py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            name="name"
+            type="text"
+          />
+          <select
+            class="shadow  border rounded ml-2 mr-5 py-2 px-5 text-gray-700 leading-tight  focus:shadow-outline"
+          >
+            <option
+              value="0"
+            >
+              does not have a direct family member
+            </option>
+            <option
+              value="1"
+            >
+              is a direct relative of
+            </option>
+          </select>
+        </div>
+        <div
+          class="col-span-3 pl-5 pr-5"
+        >
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Name
+          </label>
+          <input
+            class="shadow appearance-none border rounded ml-2 mr-5 py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            name="name"
+            type="text"
+          />
+          <select
+            class="shadow  border rounded ml-2 mr-5 py-2 px-5 text-gray-700 leading-tight  focus:shadow-outline"
+          >
+            <option
+              value="0"
+            >
+              does not have a direct family member
+            </option>
+            <option
+              value="1"
+            >
+              is a direct relative of
+            </option>
+          </select>
+        </div>
+        <div
+          class="col-span-3 pl-5 pr-5"
+        >
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Name
+          </label>
+          <input
+            class="shadow appearance-none border rounded ml-2 mr-5 py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            name="name"
+            type="text"
+          />
+          <select
+            class="shadow  border rounded ml-2 mr-5 py-2 px-5 text-gray-700 leading-tight  focus:shadow-outline"
+          >
+            <option
+              value="0"
+            >
+              does not have a direct family member
+            </option>
+            <option
+              value="1"
+            >
+              is a direct relative of
+            </option>
+          </select>
+        </div>
+        <div />
+        <div
+          class="col-start-3"
+        >
+          <button
+            class="bg-green-500 text-white font-bold py-4 px-4 rounded"
+            name="submit"
+            type="submit"
+          >
+             
+            Create secret santa list
+          </button>
+        </div>
+      </div>
+    </form>
+  </main>
+</div>
+`;

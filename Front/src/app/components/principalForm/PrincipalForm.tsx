@@ -24,7 +24,6 @@ export default function PrincipalForm() {
   };
   const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log("submit")
     const cleanDataSet = DataSetRelations.filter(x=> x !== null);
     const response = await fetch('http://localhost:8080/api/secret-santa-part-three',{
       cache: 'no-store',
@@ -40,21 +39,17 @@ export default function PrincipalForm() {
       })
     });
     if (response.ok) {
-      console.log('Form submitted successfully!');
       const responseData = await response.json();
       localStorage.setItem("combinations", JSON.stringify(responseData));
       router.push(`/Showlist`)
-    } else {
-      const responseData = await response.json();
-      
-    }
+    } 
   };
 
   return (
     <form key="form" onSubmit={handleSubmit}>
     <div key={"content"} className="mb-32 pt-5 pb-5 grid grid-cols-3 gap-4 text-left bg-white mt-20">
         <div className="col-start-3">
-            <button className=" bg-blue-500 text-white font-bold py-4 px-4 rounded" onClick={handleNewMember}>
+            <button name={'addMember'} className=" bg-blue-500 text-white font-bold py-4 px-4 rounded" onClick={handleNewMember}>
             {" "}
             add family member
           </button>
@@ -98,11 +93,11 @@ export default function PrincipalForm() {
               onSelectChange={addRelation}
             />
           ) : (
-            <></>
+            <div key={'not'}></div>
           );
         })}
-        <div className="col-start-3">
-        <button className="bg-green-500 text-white font-bold py-4 px-4 rounded" type="submit">
+        <div key={'LastButton'} className="col-start-3">
+        <button name={'submit'} className="bg-green-500 text-white font-bold py-4 px-4 rounded" type="submit">
             {" "}
             Create secret santa list
           </button>

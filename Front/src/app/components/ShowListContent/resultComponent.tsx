@@ -4,7 +4,6 @@ import { useState } from "react";
 
 
 export default function ResultComponent({firstPerson,secondPerson}:{firstPerson,secondPerson}) {
- console.log(firstPerson,secondPerson)
         return (
             <div className="pl-5 pr-5">
                 <h2 >{firstPerson}</h2>
