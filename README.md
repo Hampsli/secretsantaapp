@@ -48,14 +48,26 @@ This will start the API. You can now test your Next.js front-end application.
 
 ## Testing Coverage
 
-### Testing coverage for front end
+For run test on Front-end App you need to run:
+  ```bash
+   npm run test
+   ```
+For run test on Java-Api App you need to open project in Intellij and go to resources folder, rigth click and select 'More/Debug' > 'Run Test in resources with Coverage'
+
+### Testing coverage for Front-end App
 
 Edge cases: I didn't have time to finish, I'll continue working on it.
 
 unit Test with Jest:
 
--Test final screen with showlist.test.jsx 
--Test principal form with principalForm.test.jsx
+- Test final screen with showlist.test.jsx 
+- Test principal form with principalForm.test.jsx
 
-### Testing coverage for api**
+### Testing coverage for Api App
+
+unit Test with Mockito - JUnit Integration for microservice secretsanta:
+
+- Secret Santa with members and relationships.
+- Secret santa without relationships.
+
 
