@@ -1,28 +1,49 @@
 "use client";
 
-import React from "react";
+import ResultComponent from "./resultComponent";
+
 
 export default function ShowList() {
+  const santas = [];
+  const receivers = [];
+  const finalList = [];
 
-  try{
-    const DataSet = localStorage.getItem("combinations");
-    console.log(DataSet);
-  }catch (error){}
-
-    const resultComponent = (firstPerson,secondPerson)=>{
-        return (
-            <div className="col-span-3 pl-5 pr-5">
-                <h2>{firstPerson}</h2>
-                <p>Gitf To</p>
-                <h2>{secondPerson}</h2>
-            </div>
-        )
-    }
-
+    const DataSet = localStorage.getItem("combinations") || [];
+    const createList = () => {
+      JSON.parse(DataSet).forEach((element, index) => {
+        if(index === 0){
+          santas.push(element.p1)
+          receivers.push(element.p2)
+        }else{
+          if(!santas.includes(element.p1)){
+            santas.push(element.p1);
+          }
+          if(!receivers.includes(element.p2)){
+            receivers.push(element.p2)
+          }
+        }
+        
+        });
+        for ( var i = 0; i < santas.length; i++ ) {
+          finalList.push({santa:santas[i], receiver:receivers[i]  });
+        }
+    } 
+    createList();
+  
 
   return (
     <div key={"content"} className="mb-32 pt-5 pb-5 grid grid-cols-3 gap-4 text-left bg-white mt-20">
+      {finalList && finalList.map((row,index)=>{
+        console.log(row.santa)
+        return (
+          <ResultComponent
+            key={index}
+            firstPerson={row.santa}
+            secondPerson={row.receiver} />
+        )
+      })
 
+      }
     </div>
   );
 }
